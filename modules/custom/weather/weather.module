@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\weather\NodeInsert;
+
+/**
+ * Implements hook_theme().
+ */
+function weather_theme($existing, $type, $theme, $path)
+{
+  return [
+    'weather_template' => [
+      'variables' => [
+        'city' => NULL,
+        'data' => NULL,
+      ],
+      'template' => 'weather-template',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function weather_node_insert(Drupal\Core\Entity\EntityInterface $entity)
+{
+  $event = new NodeInsert($entity);
+  $dispatcher = \Drupal::service('event_dispatcher');
+  $dispatcher->dispatch(NodeInsert::INSERT, $event);
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+// function weather_page_attachments(array &$page) {
+//   $page['#attached']['library'][] = 'weather/weather.theme';
+// }

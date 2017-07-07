@@ -1,0 +1,10 @@
+services:
+  weather.http_client:
+    class: Drupal\weather\WeatherServices
+    arguments: ['@http_client', '%weather.http_client.base_url%']
+  custom.event_subscriber:
+    class: Drupal\weather\EventSubscriber\CustomEventSubscriber
+    tags:
+      - { name: event_subscriber }
+parameters:
+    weather.http_client.base_url: 'http://api.openweathermap.org/data/2.5/weather?q='

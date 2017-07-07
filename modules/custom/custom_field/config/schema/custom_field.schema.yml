@@ -1,0 +1,9 @@
+#created a setting named 'size', that stores a string value.
+
+field.field_settings.[FIELD ID]:
+  type: mapping
+  label: 'Custom Field settings'
+  mapping:
+    size:
+      type: string
+      label: 'Size'

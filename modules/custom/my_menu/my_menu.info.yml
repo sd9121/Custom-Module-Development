@@ -1,0 +1,5 @@
+name: Menu Route.
+type: module
+description: Convert the menu item & corresponding page callback in Drupal8.
+core: 8.x
+package: Custom

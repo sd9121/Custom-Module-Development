@@ -1,0 +1,43 @@
+my_menu.static_index:
+  path: '/admin/config/static'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Static Content'
+  requirements:
+    _permission: 'access training listing content'
+    _access : 'TRUE'
+
+my_menu.render:
+  path: '/admin/config/'
+  defaults:
+    _title: 'Static Content Page'
+  requirements:
+    _permission: 'access training content'
+    _access : 'TRUE'
+    _role: 'administrator+marketing_manager+editor'
+
+my_menu.listing:
+  path: '/admin/config/static/list/{node}'
+  defaults:
+    _controller: '\Drupal\my_menu\Controller\MyMenuController::d8_listing_callback'
+    _title: 'Node Detail'
+    node: '1'
+  requirements:
+    _permission: 'access training content'
+    _access_my_node: 'TRUE'
+  options:
+    parameters:
+      node:
+        type: entity:node
+
+my_menu.argument:
+  path: '/admin/config/static/arg-demo/{arg}'
+  defaults:
+    _controller: 'Drupal\my_menu\Controller\MyMenuController::d8_dynamic_listing_callback'
+    _title: 'Dynamic listing'
+    arg: '0'
+  requirements:
+    _permission: 'access training listing content'
+    _access : 'TRUE'
+
+

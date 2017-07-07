@@ -1,0 +1,5 @@
+my_menu.listing:
+  route_name: my_menu.listing
+  title: 'Listing'
+  appears_on:
+    - my_menu.render

@@ -1,0 +1,18 @@
+my_menu.static_index:
+  title: 'My Static Content settings'
+  description: 'Display static content.'
+  parent: system.admin_config
+  route_name: my_menu.static_index
+  weight: 100
+
+my_menu.argument:
+  title: Render
+  parent: my_menu.static_index
+  route_name: my_menu.argument
+  description: 'access training content'
+
+my_menu.listing:
+ title: Listing
+ parent: my_menu.static_index
+ route_name: my_menu.listing
+ description: 'Dynamic listing.'

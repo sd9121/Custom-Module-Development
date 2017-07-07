@@ -1,0 +1,10 @@
+my_menu.argument_type: # The first plugin ID
+  route_name: my_menu.argument
+  title: 'Argument Listing'
+  base_route: my_menu.display
+  weight: 10
+my_menu.node_list: # The second plugin ID
+  route_name: my_menu.listing
+  title: 'Node Listing'
+  base_route:  my_menu.display
+  weight: 11

@@ -1,0 +1,8 @@
+weather.static_index:
+  path: '/admin/weather-config'
+  defaults:
+    _form: '\Drupal\weather\Form\WeatherForm'
+    _title: 'Weather Information Form'
+  requirements:
+    _permission: 'access weather form'
+    _access : 'TRUE'

@@ -1,0 +1,8 @@
+custom_form.settings:
+  type: text
+  label: 'User Form Settings'
+  mapping:
+    first_name:
+      type: text
+    last_name:
+      type: text

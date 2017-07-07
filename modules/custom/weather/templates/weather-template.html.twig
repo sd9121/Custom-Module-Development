@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - city: City name of this block.
+ * - data: Array of keys and values.
+ *   - min_temp: Get minimum tempreature.
+ *   - max_temp: Get maximum tempreature.
+ *   - pressure: Get pressure of weather.
+ *   - humidity: Get humidity of weather.
+ *   - wind_speed: Get wind speed of weather.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+ #}
+ {# {{ attach_library('contextual/drupal.contextual-links') }} #}
+{#  {{ attach_library('weather/weather.theme') }} #}
+<div class="weather">
+  <div class="weather-info">
+    <ul class="front">
+      <span class=city-name>{{ city }}</span>
+      {% for key, value in data %}
+        <li>{{ key }} : {{ value }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="back">
+    Thank you, for more information
+    <a target="_blank" href="http://api.openweathermap.org/">subscribe</a> on
+  </div>
+</div>

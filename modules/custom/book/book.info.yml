@@ -1,0 +1,5 @@
+name: Custom Book Information.
+type: module
+description: Retrive book information using isbn number.
+core: 8.x
+package: Custom

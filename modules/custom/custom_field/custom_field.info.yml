@@ -1,0 +1,5 @@
+name: My Custom Field
+type: module
+description: This filed for select custom image field.
+core: 8.x
+package: custom

@@ -1,0 +1,4 @@
+services:
+  custom_form.fetchservice:
+    class: Drupal\custom_form\CustomFormServices
+    arguments: ['@database']

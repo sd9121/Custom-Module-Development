@@ -1,0 +1,3 @@
+(function($) {
+  $(".weather").flip();
+})(jQuery);

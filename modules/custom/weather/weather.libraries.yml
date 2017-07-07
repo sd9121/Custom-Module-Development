@@ -1,0 +1,10 @@
+weather.theme:
+  version: 1.x
+  css:
+    theme:
+      css/weather.css: {}
+  js:
+    /libraries/flip/dist/jquery.flip.min.js: {}
+    js/weather.js: {}
+  dependencies:
+    - core/jquery

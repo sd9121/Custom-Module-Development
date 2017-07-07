@@ -1,0 +1,8 @@
+name: Weather App.
+type: module
+description: Provide a weather information.
+core: 8.x
+package: Custom
+# libraries:
+#   - weather/weather_library
+# configure: weather.static_index

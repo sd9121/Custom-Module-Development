@@ -1,0 +1,6 @@
+services:
+  my_menu.access_checker:
+    class: Drupal\my_menu\Services\AccessCheck
+    arguments: ['@current_user']
+    tags:
+      - { name: access_check, applies_to: _access_my_node }

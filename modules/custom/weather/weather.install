@@ -1,0 +1,32 @@
+<?php
+
+use Drupal\Core\Database;
+
+
+/**
+ * Implements hook_schema().
+ */
+function weather_schema()
+{
+  $schema['weather_table'] = array(
+    // specification for table "d8_demo".
+    'description' => 'The base table for nodes.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'app_id' => array(
+        'description' => 'App Id of Weather.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+  return $schema;
+}

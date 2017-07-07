@@ -1,0 +1,6 @@
+weather_form.settings:
+  type: text
+  label: 'Weather Form Settings'
+  mapping:
+    app_id:
+      type: text

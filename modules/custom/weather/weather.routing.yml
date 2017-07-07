@@ -6,3 +6,16 @@ weather.static_index:
   requirements:
     _permission: 'access weather form'
     _access : 'TRUE'
+
+weather.upcast:
+  path: '/upcast/{config_name}'
+  defaults:
+    config: 'weather.settings.appid'
+    _title: 'My Title'
+    _controller: '\Drupal\weather\Controller\ParameterUpcaster::upcastConfig'
+  requirements:
+    _permission: 'access weather form'
+  options:
+    parameters:
+      config_name:
+        type: config_name

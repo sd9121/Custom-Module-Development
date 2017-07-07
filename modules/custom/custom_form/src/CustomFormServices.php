@@ -24,4 +24,13 @@ class CustomFormServices
       ->execute();
     return $status;
   }
+
+  public function fetchData() {
+     $result=$this->connection->select('d8_demo','d8')->fields('d8',['firstname','lastname'])->range(0,1)->execute();
+      while($row = $result->fetchAssoc()){
+        $output .= $row['firstname'];
+        $output .= $row['lastname'];
+      }
+        return $output;
+  }
 }

@@ -6,5 +6,10 @@ services:
     class: Drupal\weather\EventSubscriber\CustomEventSubscriber
     tags:
       - { name: event_subscriber }
+  config_upcast:
+    class: Drupal\weather\ParamConverter\WeatherParamConverter
+    tags:
+      - { name: paramconverter }
+
 parameters:
     weather.http_client.base_url: 'http://api.openweathermap.org/data/2.5/weather?q='

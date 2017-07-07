@@ -179,6 +179,13 @@ class UserForm extends FormBase
         '@firstname' => $form_state->getValue('firstname'),
         '@lastname' => $form_state->getValue('lastname'),
       ]));
+        $state = \Drupal::state();
+        $state->set('form.store_last', REQUEST_TIME);
+        $result=$this->customService->fetchData();
+        drupal_set_message($result);
+        $time = $state->get('form.store_last');
+        drupal_set_message(date("F j, Y, g:i a",$time));
+
     } else
       drupal_set_message(t('A server error occurred and processing did not complete.'), 'error');
   }
